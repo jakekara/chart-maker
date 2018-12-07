@@ -1,0 +1,59 @@
+import * as d3 from "d3";
+
+import React, { Component } from 'react';
+
+export default class DataImporter extends Component { 
+
+    constructor(props){
+	super(props);
+	
+	this.state = {
+	    "rows":10,
+	    "sheetData":[],
+	    "dataStatus":"No data"
+	};
+
+	this.onSheetChange = this.onSheetChange.bind(this);
+    }
+
+    onSheetChange(e){
+
+	e.preventDefault();
+
+	// convert text to sheet
+	var data = d3.tsvParse(e.target.value);
+
+	// update internal state
+	this.setState({"sheetData": data});
+
+	if (data.length > 0){
+	    this.setState({
+		"dataStatus":"Recognized " + data.length + " rows of data."
+	    });
+	}
+	else{
+	    this.setState({
+		"dataStatus":"Data format not recognized."
+	    });
+	}
+
+	// call parent call back 
+	this.props.callback(data);
+	
+    }
+    
+    render(){
+	return (
+	    <div>
+	    <h3>Copy and paste your spreadsheet below</h3>
+	    <div>{this.state.dataStatus}</div>
+	    <textarea rows={this.state.rows}
+	    onChange={this.onSheetChange}
+	    defaultValue={this.props.defaultData}
+	    value={this.state.sheetValue}
+	    className="spreadsheet-input"></textarea>
+	    </div>
+	);
+    }
+}
+

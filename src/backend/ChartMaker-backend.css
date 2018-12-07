@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700,700i');
+
+body {
+    font-family: Karla, Arial, sans-seif;
+    padding: 0px;
+    margin: 0px;
+}
+		     
+.logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 1em;
+}
+
+.banner{
+    background-color: aliceblue;
+    padding: 6px;
+    color: navy;
+
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 700;
+    font-style: italic;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.split {
+    display: flex;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.left-side, .right-side{
+    box-sizing: border-box;
+    padding: 12px;
+    padding-top: 2rem;
+    width: 50%;
+}
+
+.left-side{
+    overflow-y: scroll;
+}
+
+.spreadsheet-input{
+}
+
+iframe {
+    max-width: 100%;
+    resize: both;
+}
+
+.thumb iframe {
+    height: inherit;
+    overflow: none;
+}
+
+.picker-tray{
+    display: flex;
+    padding: 11px;
+    justify-content: center;
+}
+
+.picker-preview{
+    cursor: pointer;
+}
+
+.picker-preview.selected{
+    border: 3px solid black;
+}
+
+.picker-preview:hover{
+    box-shadow: 1px 1px 8px black;
+}
+.picker-preview {
+    margin-right: 3px;
+    margin-left: 3px;
+    
+    /* border-radius: 12px; */
+    padding: 8px;
+    background-color: rgba(0,0,0,0.2);
+    border: 3px solid rgba(0,0,0,0.2);
+}
+
+textarea{
+    width: 100%;
+}
+
+input type=["checkbox"]{
+    margin-right: 7px;
+}
+
+.column-option-tray{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.column-option-tray .column-option-group{
+    border: 1px solid gray;
+    padding: 4px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.data-status{
+    background-color: #efefef;
+    font-size: small;
+    text-align: right;
+		   
+}
+.data-status.good-data{
+    background-color: palegreen;
+    color:forestgreen;
+}
+.data-status.bad-data{
+    background-color: lightpink;
+    color:maroon;
+}

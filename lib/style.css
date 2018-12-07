@@ -1,0 +1,101 @@
+/* @import url('https://fonts.googleapis.com/css?family=Merriweather:900,400|Karla'); */
+@import url('https://fonts.googleapis.com/css?family=Merriweather:700|Karla:100,400,900');
+
+body, .table {
+    font-family: Karla, Arial, sans-seif;
+    
+}
+
+
+.sourceline, .byline,
+sans{
+    font-family: 'Karla', sans-serif;
+}
+
+
+h1,h2,h3,h4,h5,h6,h7,
+th{
+    font-family: "Merriweather", "Georgia", "Times", serif;
+    /* font-weight: 900; */
+    text-align: left;
+}
+
+tr td{
+    font-size: small;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+.sourceline, .byline{
+    color: gray;
+    font-size: small;
+    
+}
+
+.byline {
+    text-align: right;
+}
+
+table {
+    width: 100%;
+}
+
+table td,
+table th{
+    padding: 1em;
+}
+
+table td.bold-cell{
+    font-weight: 900;
+}
+
+table td.light-cell{
+    color: gray;
+}
+
+table.table-sm td,
+table.table-sm th{
+    padding: 0.2em;;
+    
+}
+
+table, th, td{
+    border-collapse: collapse;
+}
+
+table {
+}
+
+table thead th {
+    /* background-color: #aaa; */
+    /* color: white; */
+    cursor: pointer;
+}
+
+table tbody tr{
+}
+
+table thead th.sort .sort-icon {
+    color: #999;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+table thead th.sort.descending .sort-icon.descending {
+    display: inline;
+    /* color: black; */
+}
+
+table thead th.sort.ascending .sort-icon.ascending {
+    display: inline;
+    /* color: black; */
+}
+
+.table thead th .sort-icon{
+    display: none;
+}
+
+table thead
+

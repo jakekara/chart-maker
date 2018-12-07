@@ -1,0 +1,42 @@
+	GenericMaker - Maker that adds common fields and visualizes them
+		     - Options include:
+		       - title: string
+		       - explainer: string
+		       - sourceline: string
+		       - byline: string
+
+	BasicTableMaker - Maker that extends GenericMaker and adds basic column
+	                  options and visualizes a table
+		        - Options include:
+			  - condensed mode: toggle
+			  - header color
+			  - For each column
+			    - hide: toggle
+			    - display name: string
+			    - order: integer
+			    + apply color scale to numeric column
+			    + make column bold
+			    + make column lighter
+			    + make column droppable
+
+	BarChartMaker - Maker that extends BasicTableMaker options and
+	                visualizes a bar chart
+	              - Each row is a group; each column is a bar
+		      - Options include:
+		      	- For each column:
+			  + bar color
+			  + format ( money, $123,456;
+			    	     accounting, ($5 for -$5);
+			    	     commas, 123,456;
+				     rounded 123,000;
+			    	     casual (123K),
+				     signed +123 )
+				     
+      LineChartMaker - Maker that extends BarChartMaker options and visualizes a
+                       line chart
+		     - Options include:
+		       + ylim
+		       + y grid style
+		       + x grid style
+
+            MapMaker - Maker that visualizes a map

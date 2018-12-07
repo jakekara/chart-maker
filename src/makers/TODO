@@ -1,0 +1,20 @@
+TODO FRIDAY
+
+     * Structure stuff properly for initial commit
+     * Add color gradient option
+     * Add inset-bar option
+     * Add number formatting
+     * Add column bolding
+     * Create a basic grouped bar chart template
+
+BasicTable
+
+	* Add column options:
+	      * hide - DONE
+	      * show number as PCT bar
+	      * colorize rows based on column
+	* Add header color option - DONE
+	* Add sortability?
+	* Add number formatting
+
+

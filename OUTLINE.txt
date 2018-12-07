@@ -1,0 +1,25 @@
+backend - Interface for loading data, selecting viz maker, configuring, and
+          exporting 
+
+	DataImporter - React Component to load in raw data
+	TemplatePicker - React Component for choosing a chart type
+	LivePreview - React Component to preview current viz
+	Exporter - React Component to export viz standalone
+
+	ChartMakerBackend
+
+makers	- Modules for each chart type that can be loaded into backend
+
+	 GenericInput - 
+	CheckboxInput - 
+	TextAreaInput - 
+	   ColorInput - 
+	  OptionsArea - 
+
+	   GenericMaker - Maker that adds common fields and visualizes them
+	BasicTableMaker - Extends GenericMaker and adds basic column options
+  	  BarChartMaker -
+	 LineChartMaker -
+               MapMaker - Maker that visualizes a map
+
+lib	- Dependencies for live, exported visualizations, JS, CSS, etc.
