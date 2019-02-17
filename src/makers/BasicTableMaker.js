@@ -109,7 +109,7 @@ class BasicTableOptions extends OptionsArea {
 	<form>
 
 	<ColorPickerInput
-	value="black"
+	value="#999"
 	callback={this.props.callback}
 	label="Header background color"
 	name="table-header-background" />
@@ -142,18 +142,25 @@ export default class BasicTableMaker extends GenericMaker {
 
     scriptTag(){
 	return '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">'
-	+ '<script src="http://localhost:8000/TDEV/chart-tool/lib/basic-table.js"></script>'
+	+ '<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>'
+	    // + '<script src="http://localhost:8000/TDEV/chart-tool/lib/basic-table.js"></script>'
+	+ '<script src="https://projects.ctmirror.org/tools/new-tablemaker/lib/basic-table.js"></script>'	
+	// + '<script src="./lib/basic-table.js"></script>'	
 	+ '<script>'
 	+ 'var obj = ' + JSON.stringify(this.data) + ';'
 	+ 'obj.columns = ' + JSON.stringify(this.data.columns) + ";"
 	+ 'new BasicTable('
 	+ '"root",'
 	+ 'obj,'
-	+ JSON.stringify(this.options) + ").draw();"
+	    + JSON.stringify(this.options) + ").draw();"
+	    + "new pym.Child();"
+	    + "pym.Child({ polling: 500 });"
 	+ '</script>';
 
 	
-    }	
+    }
+
+    name() { return "Table"; }
 
     description(){
 	return "Better than a list."

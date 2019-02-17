@@ -1,6 +1,6 @@
 /**
- * ChartMakerBackend 
- * 
+ * ChartMakerBackend
+ *
  */
 
 // installed packages
@@ -22,34 +22,34 @@ import './ChartMaker-backend.css';
 export default class ChartMakerBackend extends Component {
 
     constructor(props){
-	super(props);
+    	super(props);
 
-	this.state = {
-	    "selectedTemplate":0,
-	};
+    	this.state = {
+    	    "selectedTemplate":0,
+    	};
 
-	this.handleTemplate = this.handleTemplate.bind(this);
-	this.handleData = this.handleData.bind(this)
-	this.getCurrentTemplate = this.getCurrentTemplate.bind(this);
-	this.setOptionKeyValue = this.setOptionKeyValue.bind(this);
+    	this.handleTemplate = this.handleTemplate.bind(this);
+    	this.handleData = this.handleData.bind(this)
+    	this.getCurrentTemplate = this.getCurrentTemplate.bind(this);
+    	this.setOptionKeyValue = this.setOptionKeyValue.bind(this);
     }
 
     handleTemplate(i){
     	this.setState({
-	    "selectedTemplate":i,
-	    "currentTemplate":this.props.templates[i]
+    	    "selectedTemplate":i,
+    	    "currentTemplate":this.props.templates[i]
     	});
     }
     
     handleData(d){
 
     	this.setState({
-	    "sheetData":d,
-	});
+    	    "sheetData":d,
+    	});
     }
 
     getCurrentTemplate(){
-	// expects data:array and options:object
+    	// expects data:array and options:object
     	return new this.props.templates[this.state.selectedTemplate](...arguments);
     }
 
@@ -57,7 +57,7 @@ export default class ChartMakerBackend extends Component {
     	var options = {...this.state["options"]}
     	options[k] = v;
     	this.setState(Object.assign(this.state, {options}),() => {
-	});
+    	});
 
     }
     

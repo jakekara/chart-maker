@@ -19,7 +19,7 @@ export default class DataImporter extends Component {
 
     onSheetChange(_, dataString){
 
-	console.log("sheetData", dataString);
+	// console.log("sheetData", dataString);
 	
 	if (!dataString){return;}
 

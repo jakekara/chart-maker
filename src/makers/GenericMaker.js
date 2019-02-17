@@ -23,6 +23,10 @@ export default class GenericMaker {
 	return this.renderHTML(false);
     }
 
+    name(){
+	return "NoViz";
+    }
+
     description(){
 	return "A viz with no viz";
     }
@@ -58,11 +62,20 @@ export default class GenericMaker {
 	    "<div class='byline'>" + this.options.byline + "</div>",
 	    "")
 
-	var ret =  "<body>"
+	var ret = "<!DOCTYPE HTML>"
+	    + "<html>"
+
+	ret += "<head>"
+	    + "<meta charset=utf-8>"
+	    + "</head>"
+	
+	ret +=  "<body>"
 	+ title
 	+ explainer
-	
-	ret += '<link rel="stylesheet" href="http://localhost:8000/TDEV/chart-tool/lib/style.css"></script>'
+
+	ret += '<link rel="stylesheet" href="https://projects.ctmirror.org/tools/new-tablemaker/lib/style.css"></script>'	
+	// ret += '<link rel="stylesheet" href="http://localhost:8000/TDEV/chart-tool/lib/style.css"></script>'
+	// ret += '<link rel="stylesheet" href="./lib/style.css"></script>'	
 
 	// ret += '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">'
 
@@ -81,6 +94,8 @@ export default class GenericMaker {
 	ret += this.scriptTag();
 
 	ret += "</body>";
+
+	ret += "</html>";
 
 	return ret;
 	

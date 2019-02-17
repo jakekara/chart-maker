@@ -28,6 +28,8 @@ body {
 
 }
 
+/***** *****/
+
 .split {
     display: flex;
     box-sizing: border-box;
@@ -45,8 +47,9 @@ body {
     overflow-y: scroll;
 }
 
-.spreadsheet-input{
-}
+
+/* .spreadsheet-input{ */
+/* } */
 
 iframe {
     max-width: 100%;
@@ -89,7 +92,8 @@ textarea{
     width: 100%;
 }
 
-input type=["checkbox"]{
+/*** ***/
+input[type="checkbox"]{
     margin-right: 7px;
 }
 
@@ -110,12 +114,13 @@ input type=["checkbox"]{
     background-color: #efefef;
     font-size: small;
     text-align: right;
-		   
 }
+
 .data-status.good-data{
     background-color: palegreen;
     color:forestgreen;
 }
+
 .data-status.bad-data{
     background-color: lightpink;
     color:maroon;

@@ -23,7 +23,7 @@ export default class TemplatePicker extends Component {
 	}.bind(this);
 	var templates = this.props.templates,
 	data = this.props.data,
-	options = this.props.optoins;
+	options = this.props.options;
 	
 	
 	return (
@@ -34,11 +34,11 @@ export default class TemplatePicker extends Component {
 		var tmp = new a(data, options);
 		var className = "picker-preview";
 		if (i === selected){ className += " selected";}
-		return <div id={a.name}
-		key={"picker-" + a.name}
+		return <div id={tmp.name()}
+		key={"picker-" + tmp.name()}
 		onClick={function(){selectTemplate(i);}}
 		className={className}>
-		<h5>{a.name}</h5>
+		    <h5>{tmp.name()}</h5>
 		<div>{tmp.description()}</div>
 		</div>;
 	    })}
